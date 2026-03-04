@@ -273,15 +273,54 @@ footer a{color:#ffd600;text-decoration:none}
   .tl-dot-wrap{grid-column:1;grid-row:1}
   .tl-dot{width:44px;height:44px;font-size:1.2rem}
 }
+  .about-section{padding:100px 20px;background:linear-gradient(160deg,#0d0400 0%,#1f0900 40%,#2a0e00 70%,#0d0400 100%);position:relative;overflow:hidden}
+.about-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 50%,rgba(255,96,0,0.12) 0%,transparent 70%),radial-gradient(ellipse 60% 50% at 80% 50%,rgba(255,214,0,0.08) 0%,transparent 70%)}
+.about-orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.about-orb-1{width:300px;height:300px;background:rgba(255,96,0,0.15);top:-60px;left:-80px}
+.about-orb-2{width:250px;height:250px;background:rgba(255,214,0,0.1);bottom:-40px;right:-60px}
+.about-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.about-head{text-align:center;margin-bottom:70px}
+.about-tag{display:inline-block;background:rgba(255,96,0,0.15);color:#ff9040;border:1px solid rgba(255,96,0,0.3);border-radius:30px;padding:5px 18px;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.about-title{font-family:'Baloo 2',cursive;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.15}
+.about-title .gold{color:#ffd600}
+.about-title-sub{color:rgba(255,210,170,0.65);font-size:1rem;margin-top:10px}
+.founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+.founder-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,120,0,0.2);border-radius:28px;padding:40px 36px;position:relative;overflow:hidden;opacity:0;transform:translateY(50px);transition:opacity 0.8s ease,transform 0.8s ease,border-color 0.3s,box-shadow 0.3s;backdrop-filter:blur(10px)}
+.founder-card.visible{opacity:1;transform:translateY(0)}
+.founder-card:nth-child(2){transition-delay:0.2s}
+.founder-card:hover{border-color:rgba(255,160,0,0.5);box-shadow:0 20px 60px rgba(255,96,0,0.18)}
+.founder-card::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;top:-60px;right:-60px;background:radial-gradient(circle,rgba(255,96,0,0.18),transparent 70%);transition:0.4s}
+.founder-card:hover::before{transform:scale(1.3)}
+.fc-role-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(90deg,rgba(255,96,0,0.25),rgba(212,0,0,0.2));border:1px solid rgba(255,96,0,0.35);border-radius:20px;padding:4px 14px;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ff9040;margin-bottom:24px}
+.fc-avatar{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,#ff6000,#d40000);display:flex;align-items:center;justify-content:center;font-family:'Baloo 2',cursive;font-size:2rem;font-weight:900;color:#fff;margin-bottom:22px;box-shadow:0 0 0 5px rgba(255,96,0,0.2),0 8px 30px rgba(255,96,0,0.35);letter-spacing:-2px}
+.founder-card:nth-child(2) .fc-avatar{background:linear-gradient(135deg,#ffd600,#ff9500);box-shadow:0 0 0 5px rgba(255,214,0,0.2),0 8px 30px rgba(255,170,0,0.35)}
+.fc-name{font-family:'Baloo 2',cursive;font-size:1.75rem;font-weight:900;color:#fff;margin-bottom:4px;line-height:1.1}
+.fc-name .first{color:#ff6000}
+.founder-card:nth-child(2) .fc-name .first{color:#ffd600}
+.fc-origin{font-size:0.8rem;font-weight:600;color:rgba(255,200,140,0.6);letter-spacing:0.5px;margin-bottom:20px;display:flex;align-items:center;gap:5px}
+.fc-divider{width:40px;height:3px;border-radius:4px;background:linear-gradient(90deg,#ff6000,#d40000);margin-bottom:20px}
+.founder-card:nth-child(2) .fc-divider{background:linear-gradient(90deg,#ffd600,#ff9500)}
+.fc-bio{font-size:0.92rem;color:rgba(255,220,180,0.78);line-height:1.8;margin-bottom:28px}
+.fc-stats{display:flex;gap:10px;flex-wrap:wrap}
+.fc-stat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,150,0,0.2);border-radius:12px;padding:8px 14px;text-align:center}
+.fc-stat-val{font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:800;color:#ff9040;line-height:1}
+.founder-card:nth-child(2) .fc-stat-val{color:#ffd600}
+.fc-stat-lbl{font-size:0.68rem;color:rgba(255,200,140,0.55);font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.about-vision{margin-top:50px;padding:36px 40px;background:linear-gradient(135deg,rgba(255,96,0,0.12),rgba(255,214,0,0.08));border:1px solid rgba(255,180,0,0.2);border-radius:24px;display:flex;align-items:center;gap:24px;backdrop-filter:blur(8px);opacity:0;transform:translateY(30px);transition:opacity 0.8s ease 0.4s,transform 0.8s ease 0.4s}
+.about-vision.visible{opacity:1;transform:translateY(0)}
+.vision-icon{font-size:2.8rem;flex-shrink:0}
+.vision-text h3{font-family:'Baloo 2',cursive;font-size:1.3rem;font-weight:800;color:#ffd600;margin-bottom:5px}
+.vision-text p{font-size:0.9rem;color:rgba(255,210,170,0.7);line-height:1.7}
+@media(max-width:680px){.founders-grid{grid-template-columns:1fr}.about-vision{flex-direction:column;text-align:center;padding:28px 24px}.founder-card{padding:28px 22px}}
 </style>
 </head>
 <body>
 
 <!-- ===== NAV ===== -->
 <nav>
-  <a class="logo" href="#" style="flex-direction:column;align-items:center;gap:2px;">
-    <img src="logo.png" alt="MunchJoy Logo" style="width:120px;height:auto;border-radius:0;box-shadow:none;">
-    <div class="logo-tagline" style="text-align:center;width:100%;">Every Munch Gives You Joy</div>
+<a class="logo" href="#" style="flex-direction:column;align-items:center;gap:1px;text-decoration:none;">
+    <img src="logo.png" alt="MunchJoy Logo" style="width:80px;height:auto;border-radius:0;box-shadow:none;display:block;">
+    <div style="font-size:0.55rem;color:#aa5500;font-weight:700;letter-spacing:0.4px;text-align:center;line-height:1;">Every Munch Gives You Joy</div>
 </a>
   <button class="cart-btn" onclick="openCart()">
     &#128722; Cart
@@ -426,7 +465,60 @@ footer a{color:#ffd600;text-decoration:none}
     <div class="story-end-sub">From Bihar's ponds to your hands — crafted with care at every step</div>
   </div>
 </section>
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-section" id="about">
+  <div class="about-orb about-orb-1"></div>
+  <div class="about-orb about-orb-2"></div>
 
+  <div class="about-inner">
+    <div class="about-head">
+      <div class="about-tag">&#128101; Meet the Founders</div>
+      <h2 class="about-title">The Minds Behind<br>the <span class="gold">Munch</span></h2>
+      <p class="about-title-sub">Two young dreamers from Assam on a mission to redefine healthy snacking in India</p>
+    </div>
+
+    <div class="founders-grid">
+
+      <div class="founder-card" id="fc1">
+        <div class="fc-role-badge">&#9733; Founder &amp; CEO</div>
+        <div class="fc-avatar">JS</div>
+        <div class="fc-name"><span class="first">Jitu</span> Sahani</div>
+        <div class="fc-origin">&#128205; Gohpur, Assam &nbsp;·&nbsp; 21 years old</div>
+        <div class="fc-divider"></div>
+        <p class="fc-bio">At just 21, Jitu had the audacity to turn a simple snack into a movement. Born and raised in the small town of Gohpur, Assam, he noticed a gap in the market — healthy snacks that actually taste incredible. That spark became MunchJoy. As Founder & CEO, Jitu drives the vision, the hustle, and the heart behind every pack that reaches your doorstep.</p>
+        <div class="fc-stats">
+          <div class="fc-stat"><div class="fc-stat-val">21</div><div class="fc-stat-lbl">Years Old</div></div>
+          <div class="fc-stat"><div class="fc-stat-val">5+</div><div class="fc-stat-lbl">Flavours</div></div>
+          <div class="fc-stat"><div class="fc-stat-val">&#128293;</div><div class="fc-stat-lbl">Visionary</div></div>
+        </div>
+      </div>
+
+      <div class="founder-card" id="fc2">
+        <div class="fc-role-badge" style="background:linear-gradient(90deg,rgba(255,214,0,0.2),rgba(255,150,0,0.15));border-color:rgba(255,214,0,0.3);color:#ffd600;">&#9733; Co-Founder</div>
+        <div class="fc-avatar">MS</div>
+        <div class="fc-name"><span class="first">Manish</span> Shah</div>
+        <div class="fc-origin">&#128205; Gohpur, Assam &nbsp;·&nbsp; 21 years old</div>
+        <div class="fc-divider"></div>
+        <p class="fc-bio">Manish is the creative engine that keeps MunchJoy running at full speed. Also 21 and from Gohpur, he's been Jitu's closest partner since day one — bringing the strategy, the storytelling, and the sheer passion that makes this brand stand out. As Co-Founder, Manish ensures that every detail, from flavour craft to customer experience, feels nothing short of joyful.</p>
+        <div class="fc-stats">
+          <div class="fc-stat"><div class="fc-stat-val">21</div><div class="fc-stat-lbl">Years Old</div></div>
+          <div class="fc-stat"><div class="fc-stat-val">&#127775;</div><div class="fc-stat-lbl">Creative</div></div>
+          <div class="fc-stat"><div class="fc-stat-val">&#128170;</div><div class="fc-stat-lbl">Hustler</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="about-vision" id="aboutVision">
+      <div class="vision-icon">&#127919;</div>
+      <div class="vision-text">
+        <h3>Our Mission</h3>
+        <p>Two guys from a small town in Assam, proving that age is just a number and big dreams have no zip code. MunchJoy isn't just a snack brand — it's a reminder that the best things in life are worth building from scratch, one munch at a time.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- ===== PRODUCTS ===== -->
 <section id="products">
   <div class="sec-head">
@@ -708,12 +800,18 @@ function showToast(msg){
   clearTimeout(toastT);
   toastT=setTimeout(function(){el.classList.remove('on');},2500);
 }
+function observeFounders(){
+  var els=[document.getElementById('fc1'),document.getElementById('fc2'),document.getElementById('aboutVision')];
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.15});
+  els.forEach(function(el){if(el)obs.observe(el);});
+}
 
 /* ===== INIT ===== */
   updateBadge();
   renderProducts();
   initCarousel();
   observeSteps();
+  observeFounders();
 </script>
 </body>
 </html>
